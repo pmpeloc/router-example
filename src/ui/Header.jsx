@@ -1,22 +1,20 @@
-import { Link } from 'react-router-dom';
+import logoML from '../assets/images/mercado-libre-logo.png';
+import MenuItems from './MenuItems';
 import './Header.css';
 
 const Header = () => {
+  const menuItems = [
+    { link: '/', name: 'Home' },
+    { link: '/about', name: 'About' },
+    { link: '/contact', name: 'Contact' },
+    { link: '/products', name: 'Products' },
+  ];
+
   return (
     <div className='container'>
       <nav className='header'>
-        <p>Logo</p>
-        <ul className='menu'>
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to='/about'>About</Link>
-          </li>
-          <li>
-            <Link to='/contact'>Contact</Link>
-          </li>
-        </ul>
+        <img src={logoML} alt='Logo' className='logo-img' />
+        <MenuItems menuItems={menuItems} />
       </nav>
     </div>
   );

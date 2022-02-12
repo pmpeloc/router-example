@@ -10,10 +10,9 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.menu {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
+.logo-img {
+  height: 2rem;
 }
