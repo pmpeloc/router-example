@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import './ProductsPage.css';
 
@@ -20,7 +21,9 @@ const ProductsPage = () => {
   return (
     <div className='product-list'>
       {products.map((product) => (
-        <Card product={product} />
+        <Link key={product.id} to={`/products/${product.id}`}>
+          <Card product={product} />
+        </Link>
       ))}
     </div>
   );
